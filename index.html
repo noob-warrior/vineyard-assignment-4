@@ -115,7 +115,7 @@
         <section id="tasks" class="tasks-section">
             <h2>JavaScript Coding and Timer Challenge</h2>
 
-            <!-- 2nd max -->
+            <!-- 2nd Largest -->
             <div class="task-card" id="task1">
                 <h3>Find Second Largest Number</h3>
                 <p><strong>Array:</strong> [25, 45, 67, 89, 12, 90, 44]</p>
@@ -123,7 +123,7 @@
                 <div id="task1-result" class="result"></div>
             </div>
 
-            <!-- unique -->
+            <!-- Unique -->
             <div class="task-card" id="task2">
                 <h3>Return Unique Elements</h3>
                 <p><strong>Array 1:</strong> [1, 2, 3, 4, 5]</p>
@@ -132,7 +132,7 @@
                 <div id="task2-result" class="result"></div>
             </div>
 
-            <!-- score -->
+            <!-- Scores -->
             <div class="task-card" id="task3">
                 <h3>Student Score Analysis</h3>
                 <p><strong>Students and their scores:</strong></p>
@@ -145,7 +145,7 @@
                 <div id="task3-result" class="result"></div>
             </div>
 
-            <!-- timer -->
+            <!-- Timer -->
             <div class="task-card" id="task4">
                 <h3>Countdown Timer</h3>
                 <div class="timer-display" id="timer-display">01:00:00</div>
@@ -181,13 +181,11 @@
     </footer>
 
     <script>
-        // contact
         function handleContactSubmit(event) {
             event.preventDefault();
             alert('Thank you for your message! Your form has been submitted successfully.');
         }
 
-        // 2nd max
         function findSecondLargest() {
             const numbers = [25, 45, 67, 89, 12, 90, 44];
             const descending = [...numbers].sort((a, b) => b - a);
@@ -196,7 +194,6 @@
             console.log(`Second Largest Number: ${result}`);
         }
 
-        // unique
         function getUniqueElements() {
             const firstSet = [1, 2, 3, 4, 5];
             const secondSet = [4, 5, 6, 7, 8];
@@ -206,7 +203,6 @@
             console.log(`Unique Elements: [${uniqueOnly.join(', ')}]`);
         }
 
-        // score
         function analyzeScores() {
             const data = [
                 { name: 'Alice', age: 22, scores: [78, 85, 92] },
@@ -230,13 +226,12 @@
             console.log(message);
         }
 
-        // Timer state management
-        // timer
+        // Timer state
         let timerInterval = null;
         let remaining = 3600;
 
         function startTimer() {
-            if (timerInterval) return; // Prevent multiple intervals from running
+            if (timerInterval) return; // Prevent duplicate
             timerInterval = setInterval(() => {
                 if (remaining > 0) {
                     remaining--;
@@ -265,18 +260,17 @@
         }
 
         function refreshDisplay() {
-            // Convert seconds to HH:MM:SS format
+            // HH:MM:SS format
             const h = String(Math.floor(remaining / 3600)).padStart(2, '0');
             const m = String(Math.floor((remaining % 3600) / 60)).padStart(2, '0');
             const s = String(remaining % 60).padStart(2, '0');
             document.getElementById('timer-display').textContent = `${h}:${m}:${s}`;
         }
 
-        // hobby
         function setupDeleteButtons() {
             const btns = document.querySelectorAll('.delete-btn');
             btns.forEach(btn => {
-                // Clone to remove old event listeners
+                // Remove old listeners
                 const fresh = btn.cloneNode(true);
                 btn.parentElement.replaceChild(fresh, btn);
                 
@@ -290,7 +284,7 @@
         }
 
         function renumberList() {
-            // Recount items and update numbering after deletions
+            // Renumber items
             const list = document.getElementById('hobby-benefits-list');
             Array.from(list.children).forEach((li, i) => {
                 const strong = li.querySelector('strong');
@@ -312,7 +306,7 @@
                 const li = document.createElement('li');
                 const count = list.children.length + 1;
                 
-                // Split input by colon to separate title from description
+                // Split by colon
                 const parts = val.split(':');
                 const heading = parts[0].trim();
                 const content = parts[1] ? parts[1].trim() : '';
@@ -335,7 +329,6 @@
             }
         });
 
-        // qna
         class QAItem {
             constructor(question, answer) {
                 this.question = question;
@@ -431,7 +424,6 @@
             )
         ];
 
-        // qna render
         function renderQAItems() {
             const container = document.getElementById('qa-list');
 
@@ -453,7 +445,6 @@
         window.addEventListener('load', renderQAItems);
         window.addEventListener('resize', syncOpenQAHeights);
 
-        // footer time
         function updateFooterTime() {
             const footerEl = document.querySelector('.footer');
             const now = new Date();
