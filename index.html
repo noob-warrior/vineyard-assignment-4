@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1 class="header-title">Ritesh Kumar</h1>
+            <p class="header-tagline">Aspiring Full Stack Developer</p>
+        </div>
+    </header>
+
+    <nav class="navbar">
+        <div class="container">
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#javascript-tasks">JavaScript Tasks</a></li>
+                <li><a href="#qa-section">Q&amp;A</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container page-main">
+        <section id="home" class="panel home-section" aria-labelledby="home-title">
+            <div class="section-heading">
+                <h2 id="home-title">Home</h2>
+                <p class="section-kicker">A short introduction about me, the hobby I enjoy most, and why it means a lot to me.</p>
+            </div>
+
+            <h3 class="section-subheading">Brief Introduction</h3>
+            <p>My name is Ritesh Kumar. I am currently pursuing B.Sc. (H) Computer Science from Ramanujan College, and I joined the Vineyard program so I can improve my skills in the MERN stack step by step.</p>
+
+            <div class="home-layout">
+                <article class="info-card" aria-labelledby="hobby-title">
+                    <h3 id="hobby-title">My Favorite Hobby: Web Development</h3>
+                    <p>Web development is my favorite hobby because it gives me a chance to build things with my own ideas and keep learning at the same time. I really enjoy taking a simple thought and turning it into a page, layout, or feature that works in real life.</p>
+                </article>
+
+                <article class="info-card" aria-labelledby="benefits-title">
+                    <h3 id="benefits-title">Benefits of Web Development as a Hobby</h3>
+                    <ol id="benefits-list" class="benefits-list">
+                        <li class="benefit-item">
+                            <div class="benefit-shell">
+                                <span class="benefit-copy"><strong>Creativity:</strong> The ability to combine design and functionality to create engaging digital experiences.</span>
+                                <button type="button" class="delete-btn" aria-label="Remove Creativity benefit">Remove</button>
+                            </div>
+                        </li>
+                        <li class="benefit-item">
+                            <div class="benefit-shell">
+                                <span class="benefit-copy"><strong>Problem Solving:</strong> Developing logical solutions to complex challenges and debugging issues effectively.</span>
+                                <button type="button" class="delete-btn" aria-label="Remove Problem Solving benefit">Remove</button>
+                            </div>
+                        </li>
+                        <li class="benefit-item">
+                            <div class="benefit-shell">
+                                <span class="benefit-copy"><strong>Career Growth:</strong> Continuously expanding skills and staying relevant in a rapidly evolving tech industry.</span>
+                                <button type="button" class="delete-btn" aria-label="Remove Career Growth benefit">Remove</button>
+                            </div>
+                        </li>
+                    </ol>
+
+                    <form id="benefit-form" class="benefit-form" aria-labelledby="benefit-form-title">
+                        <h4 id="benefit-form-title">Add another benefit</h4>
+                        <div class="benefit-form-grid">
+                            <div class="form-group">
+                                <label for="benefit-title">Benefit title</label>
+                                <input type="text" id="benefit-title" name="benefitTitle" placeholder="Example: Teamwork" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="benefit-description">Benefit description</label>
+                                <input type="text" id="benefit-description" name="benefitDescription" placeholder="Write a short description" required>
+                            </div>
+                        </div>
+                        <button type="submit" class="submit-btn benefit-btn">Add Benefit</button>
+                    </form>
+                </article>
+            </div>
+        </section>
+
+        <section id="about" class="panel about-section" aria-labelledby="about-title">
+            <div class="section-heading">
+                <h2 id="about-title">About Me</h2>
+            </div>
+            <p>I am a computer science student at Ramanujan College with a strong interest in web development. Learning through the Vineyard program has helped me understand how the front end and back end come together, and I like working on projects that are simple, useful, and easy to use.</p>
+        </section>
+
+        <section id="projects" class="panel projects-section" aria-labelledby="projects-title">
+            <div class="section-heading">
+                <h2 id="projects-title">Projects</h2>
+            </div>
+            <div class="projects-grid">
+                <article class="project-card">
+                    <h3>E-Commerce Platform</h3>
+                    <p>A full-stack e-commerce application built with React and Node.js featuring product filtering, shopping cart, and payment integration.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/noob-warrior" target="_blank" rel="noopener noreferrer">GitHub</a>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <h3>Weather App</h3>
+                    <p>A responsive weather application using a REST API to fetch real-time weather data. Built with vanilla JavaScript and CSS Grid for a modern layout.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/noob-warrior" target="_blank" rel="noopener noreferrer">GitHub</a>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <h3>Task Management System</h3>
+                    <p>A collaborative task management tool built with React and Firebase, allowing users to create, assign, and track project tasks in real-time.</p>
+                    <div class="project-links">
+                        <a href="https://github.com" target="_blank" rel="noopener noreferrer">GitHub</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="javascript-tasks" class="panel js-section" aria-labelledby="js-title">
+            <div class="section-heading">
+                <h2 id="js-title">JavaScript Practice</h2>
+                <p class="section-kicker">This section shows the JavaScript tasks from my assignment, including the timer challenge.</p>
+            </div>
+
+            <div class="task-grid">
+                <article class="task-card" aria-labelledby="task-one-title">
+                    <p class="task-label">Task 1</p>
+                    <h3 id="task-one-title">Find Second Largest Number</h3>
+                    <p class="task-note">Array used: [23, 45, 67, 89, 12, 90, 44]</p>
+                    <p class="task-output">Second largest number: <strong id="second-largest-output"></strong></p>
+                </article>
+
+                <article class="task-card" aria-labelledby="task-two-title">
+                    <p class="task-label">Task 2</p>
+                    <h3 id="task-two-title">Return Unique Elements</h3>
+                    <p class="task-note">Arrays used: [2, 4, 6, 8, 10] and [6, 8, 10, 12, 14]</p>
+                    <p class="task-output">Unique elements: <strong id="unique-elements-output"></strong></p>
+                </article>
+
+                <article class="task-card" aria-labelledby="task-three-title">
+                    <p class="task-label">Task 3</p>
+                    <h3 id="task-three-title">Student Score Analysis</h3>
+                    <ul id="student-average-list" class="result-list"></ul>
+                    <p id="top-student-output" class="task-output"></p>
+                </article>
+
+                <article class="task-card timer-card" aria-labelledby="task-four-title">
+                    <p class="task-label">Task 4</p>
+                    <h3 id="task-four-title">Countdown Timer</h3>
+                    <p class="task-note">A one-hour timer with start, pause, and reset controls. The timer stays in MM:SS format and stops at zero.</p>
+
+                    <div class="timer-box">
+                        <p id="timer-display" class="timer-display" aria-live="polite">60:00</p>
+                        <div class="timer-controls">
+                            <button type="button" class="timer-btn" id="start-timer-btn">Start</button>
+                            <button type="button" class="timer-btn timer-btn-alt" id="pause-timer-btn">Pause</button>
+                            <button type="button" class="timer-btn timer-btn-light" id="reset-timer-btn">Reset</button>
+                        </div>
+                        <p id="timer-message" class="timer-message" aria-live="polite"></p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="qa-section" class="panel qa-section" aria-labelledby="qa-title">
+            <div class="section-heading">
+                <h2 id="qa-title">Questions and Answers</h2>
+                <p class="section-kicker">A few common questions about my learning journey and interest in web development.</p>
+            </div>
+
+            <div id="qa-list" class="qa-list" aria-live="polite"></div>
+        </section>
+
+        <section id="contact" class="panel contact-section" aria-labelledby="contact-title">
+            <div class="section-heading">
+                <h2 id="contact-title">Get In Touch</h2>
+                <p class="contact-copy">If you want to connect with me, you can send a message using the form below.</p>
+            </div>
+
+            <form id="contact-form" class="contact-form">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-inner">
+            <p>Connect with me on social media:</p>
+            <div class="social-links">
+                <a href="https://linkedin.com/in/ritesh-kumar-720854251" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">LinkedIn</a>
+                <a href="https://github.com/noob-warrior" target="_blank" rel="noopener noreferrer" aria-label="GitHub">GitHub</a>
+                <a href="https://x.com/RiteshKuma6112" target="_blank" rel="noopener noreferrer" aria-label="X">X</a>
+            </div>
+            <p class="footer-time-label">Current date and time</p>
+            <p id="footer-time" class="footer-time" aria-live="polite"></p>
+            <p class="copyright">&copy; 2026 Ritesh Kumar. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
